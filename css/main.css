@@ -23,8 +23,18 @@ p {
   font-family: "Rubik", Helvetica, sans-serif;
 }
 
-div {
+h2 {
+  font-family: "Radley", Helvetica, sans-serif;
+  text-align: center;
+}
+
+.box {
   border: 2px solid black;
   box-shadow: 5px 5px black;
+  padding: 1rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.main {
   padding: 1rem;
 }
