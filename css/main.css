@@ -6,3 +6,25 @@ faded-green: #00F3B4
 dark-green: #0BDC6B
 green: #0CFA36
 */
+
+/*fonts
+serif(headings):
+sans-serif(body):rubik
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Radley|Rubik');
+
+h1 {
+  font-family: "Radley", Helvetica, sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: "Rubik", Helvetica, sans-serif;
+}
+
+div {
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  padding: 1rem;
+}
