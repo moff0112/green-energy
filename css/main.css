@@ -68,7 +68,7 @@ h2 {
 }
 
 .navbar li a:hover {
-    background-color: #0BD7DC;
+    background-color: #0BDC6B;
 }
 
 .navbar li:last-child a {
@@ -79,11 +79,13 @@ ul.icons {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center
 }
 
 ul.icons li {
   display: inline;
   font-size: 300%;
+  padding: 2rem;
 }
 
 footer {
