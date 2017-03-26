@@ -33,6 +33,11 @@ h2 {
   text-align: center;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .slider {
   border: 2px solid black;
   box-shadow: 5px 5px black;
@@ -87,6 +92,7 @@ ul.icons li {
   font-size: 300%;
   padding: 2rem;
 }
+
 
 footer {
   width: 100%;
