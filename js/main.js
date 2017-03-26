@@ -21,7 +21,7 @@ inside loops for slide-show part)
 k (variable to be used as index-pointer
 inside loops for hide/reveal content part) */
 
-var masthead, slides, buttons, contents, container, i, k;
+var masthead, slideIndex, slides, buttons, contents, container, i, k;
 
 /*
 Access empty div with the
@@ -86,7 +86,18 @@ runSlides every 6 seconds.
 (Function runSlides is
 a slide-show "engine"). */
 
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+    var slides = document.getElementsByClassName("mh-image");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 
 /*
 -------------------------------------
@@ -140,4 +151,4 @@ End function handleClick. */
 /*
 Loop through buttons array and
 register handleClick to listen for "click" event
-on any button from array buttons. */ 
+on any button from array buttons. */

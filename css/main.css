@@ -97,15 +97,62 @@ ul.icons li {
   padding: 2rem;
 }
 
+h1 {
+  font-size: 2.618rem;
+  width: 100%;
+  height: auto;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-shadow: 3px 2px 0px black;
+  background: #0CFA36; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #0CB6FA , #00F3B4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #0CB6FA , #00F3B4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #0CB6FA , #00F3B4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,  #0CB6FA, #00F3B4); /* Standard syntax */
+}
+
 
 footer {
   width: 100%;
   height: auto;
   color: white;
   padding: 1rem;
+  text-align: center;
+  text-shadow: 2px 1px 1px black;
   background: #0CFA36; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #0CB6FA , #00F3B4); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #0CB6FA , #00F3B4); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, #0CB6FA , #00F3B4); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,  #0CB6FA, #00F3B4); /* Standard syntax */
+}
+
+.mh-image {
+  display:none
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
