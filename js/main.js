@@ -21,7 +21,7 @@ inside loops for slide-show part)
 k (variable to be used as index-pointer
 inside loops for hide/reveal content part) */
 
-var masthead, slideIndex, slides, buttons, contents, container, i, k;
+var masthead, slides, buttons, contents, container, i, k;
 
 /*
 Access empty div with the
@@ -29,9 +29,17 @@ class "mh-image" (look at the HTML structure
 above), and pass the reference
 to variable masthead */
 
+masthead = getElementsByClassName('mh-image');
+
 /*
 Assign 4 elements to array slides
 (slide-show content) */
+
+var slides = [
+  "../img/nuclear.jpg" => "nuclear",
+  "../img/solar.jpg" => "solar",
+  "../img/wind.jpg" => "wind"
+]
 
 /*
 Define function fadeOut. This function will
@@ -41,6 +49,10 @@ make currently displayed slide disappear. */
    on masthead and set it to 0. */
 /*
 End function fadeOut. */
+
+function fadeOut {
+
+}
 
 /*
 Use i as index pointer for the array slides.
@@ -86,18 +98,6 @@ runSlides every 6 seconds.
 (Function runSlides is
 a slide-show "engine"). */
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var slides = document.getElementsByClassName("mh-image");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-    }
-
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
 
 /*
 -------------------------------------
