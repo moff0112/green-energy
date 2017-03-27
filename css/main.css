@@ -46,7 +46,7 @@ i:hover {
   border: 2px solid black;
   box-shadow: 5px 5px black;
   padding: 1rem;
-  margin: 0 1rem 0 1rem;
+  margin: 0 10px 0 0;
 }
 
 .main {
@@ -86,7 +86,7 @@ ul.navbar li:last-child a {
 
 ul.icons {
   list-style-type: none;
-  margin: 0;
+  margin: 1rem;
   padding: 0;
   text-align: center
 }
@@ -101,15 +101,10 @@ h1 {
   font-size: 2.618rem;
   width: 100%;
   height: auto;
-  color: white;
+  color: black;
   padding: 1rem;
   text-align: center;
-  text-shadow: 3px 2px 0px black;
-  background: #0CFA36; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #0CB6FA , #00F3B4); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #0CB6FA , #00F3B4); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #0CB6FA , #00F3B4); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,  #0CB6FA, #00F3B4); /* Standard syntax */
+  text-shadow: 3px 2px 0px #0BD7DC;
 }
 
 
@@ -129,6 +124,12 @@ footer {
 
 
 @media screen and (min-width: 35rem) {
+
+  .wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   ul.navbar {
       list-style: none;
       padding: 0;
@@ -168,13 +169,13 @@ footer {
 }
 
   .slider {
-    width: 45%;
+    width: calc(50% - 2px);
     float: left;
 
   }
 
   .main {
-    width: 45%;
+    width: calc(50% - 8px);
     float: right;
     padding: 0;
 
@@ -184,3 +185,31 @@ footer {
     float: left;
     margin-top: 2rem;
   }
+
+  @media screen and (min-width: 60rem) {
+
+    .wrapper {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .slider {
+      width: calc(30% - 2px);
+      float: left;
+
+    }
+
+    .main {
+      width: calc(70% - 8px);
+      float: right;
+      padding: 0;
+
+    }
+
+    h1 {
+      text-align: left;
+    }
+
+    h2 {
+      text-align: left;
+    }
