@@ -21,7 +21,7 @@ inside loops for slide-show part)
 k (variable to be used as index-pointer
 inside loops for hide/reveal content part) */
 
-var masthead, slides, buttons, contents, container, i, k;
+var masthead, myIndex, slides, buttons, contents, container, i, k;
 
 /*
 Access empty div with the
@@ -29,17 +29,19 @@ class "mh-image" (look at the HTML structure
 above), and pass the reference
 to variable masthead */
 
-masthead = getElementsByClassName('mh-image');
+masthead = getElementsByClassName("mySlides");
 
 /*
 Assign 4 elements to array slides
 (slide-show content) */
 
-var slides = [
-  "../img/nuclear.jpg",
-  "../img/solar.jpg",
-  "../img/wind.jpg",
+slides = [
+  "<img src='./img/nuclear.jpg'>",
+  "<img src='./img/nuclear.jpg'>",
+  "<img src='./img/nuclear.jpg'>",
 ]
+
+
 
 /*
 Define function fadeOut. This function will
@@ -50,13 +52,26 @@ make currently displayed slide disappear. */
 /*
 End function fadeOut. */
 
-function fadeOut {
-
-}
-
 /*
 Use i as index pointer for the array slides.
 Assign i with initial value 0. */
+
+
+runSlides();
+
+function runSlides() {
+  for (i = 0; i < masthead.length; i += 1) {
+    masthead[i].style.display = "none";
+  }
+
+  myIndex++;
+    if (myIndex > masthead.length) {myIndex = 1}
+    masthead[myIndex-1].styledisplay = "block";
+    setTimeOut(runSlides, 5000);
+}
+
+
+}
 
 /*
 Define function runSlides.
