@@ -36,9 +36,9 @@ Assign 4 elements to array slides
 (slide-show content) */
 
 var slides = [
-  "../img/nuclear.jpg" => "nuclear",
-  "../img/solar.jpg" => "solar",
-  "../img/wind.jpg" => "wind"
+  "../img/nuclear.jpg",
+  "../img/solar.jpg",
+  "../img/wind.jpg",
 ]
 
 /*
