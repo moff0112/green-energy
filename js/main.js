@@ -36,5 +36,5 @@ function runSlides() {
     y += 1;
     if (y > masthead.length) {y = 1}
     masthead[y-1].style.display = "block";
-    setTimeout(runSlides, 2000);
+    setTimeout(runSlides, 6000);
 }
