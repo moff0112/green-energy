@@ -1,27 +1,4 @@
-/*
-Declare variables:
-masthead (HTML container storing
-the current slide - slide-show part)
-
-slides (array of elements storing
-all slides - slide-show part)
-
-buttons (collected list of
-3 buttons in array - main content hide/reveal part)
-
-contents (array of 3 elements - contents
-in main content hide/reveal part)
-
-container (HTML element that will get a content
-from array contents)
-
-i (variable to be used as index-pointer
-inside loops for slide-show part)
-
-k (variable to be used as index-pointer
-inside loops for hide/reveal content part) */
-
-var y, i, masthead;
+var y, i, masthead, k, buttons, contents, container;
 
 y = 0;
 
@@ -37,4 +14,43 @@ function runSlides() {
     if (y > masthead.length) {y = 1}
     masthead[y-1].style.display = "block";
     setTimeout(runSlides, 6000);
+}
+
+
+buttons = document.getElementsByClassName("btn");
+
+contents = ["<p>This is content one<p>",
+            "<p>This is content two</p>",
+            "<p>This is content three</p>"
+          ];
+
+imge = ["<img src='./img/hydro.jpg'/>",
+        "<img src='./img/hydro.jpg'/>",
+        "<img src='./img/hydro.jpg'/>"
+];
+
+
+container = document.getElementsByClassName("container")[0];
+
+photo = document.getElementsByClassName("slider")[0];
+
+function handleClick(ev) {
+  ev.preventDefault();
+
+  for (i = 0; i < buttons.length; i += 1) {
+    if (buttons[i].hasAttribute("id")) {
+        buttons[i].removeAttribute("id");
+    }
+
+    if (ev.target === buttons[i]) {
+      container.innerHTML = contents[i];
+      photo.innerHTML = imge[i];
+      buttons[i].setAttribute("id", "active");
+    }
+
+  }
+}
+
+for (i = 0; i < buttons.length; i += 1) {
+  buttons[i].addEventListener("click", handleClick, false);
 }

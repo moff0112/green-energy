@@ -42,7 +42,11 @@ img {
   height: auto;
 }
 
-i:hover {
+.btn:hover {
+  color: #0CB6FA;
+}
+
+#active {
   color: #0CB6FA;
 }
 
@@ -53,7 +57,7 @@ i:hover {
   margin: 0 10px 0 0;
 }
 
-.main {
+.container {
   padding: 1rem;
 }
 
@@ -178,7 +182,7 @@ footer {
 
   }
 
-  .main {
+  .container {
     width: calc(50% - 8px);
     float: right;
     padding: 0;
@@ -203,7 +207,7 @@ footer {
 
     }
 
-    .main {
+    .container {
       width: calc(70% - 8px);
       float: right;
       padding: 0;
