@@ -28,8 +28,14 @@ h1 {
   text-align: center;
 }
 
+body {
+    font-size:  0.618rem;
+    line-height: 1.4;
+}
+
 p {
   font-family: "Rubik", Helvetica, sans-serif;
+
 }
 
 h2 {
@@ -121,7 +127,6 @@ footer {
   color: white;
   padding: 1rem;
   text-align: center;
-  text-shadow: 2px 1px 1px black;
   background: #0CFA36; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #0CB6FA , #00F3B4); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #0CB6FA , #00F3B4); /* For Opera 11.1 to 12.0 */
@@ -131,6 +136,11 @@ footer {
 
 
 @media screen and (min-width: 35rem) {
+
+  body {
+      font-size:  1rem;
+      line-height: 1.4;
+  }
 
   .wrapper {
     margin-left: 5%;
@@ -172,6 +182,12 @@ footer {
       margin: 0;
   }
 
+  ul.icons li {
+    display: inline;
+    font-size: 300%;
+    padding: 2rem;
+  }
+
 .mh-image {
   margin-top: 1rem;
 }
@@ -195,6 +211,11 @@ footer {
   }
 
   @media screen and (min-width: 60rem) {
+
+    body {
+        font-size:  1.618rem;
+        line-height: 1.4;
+    }
 
     .wrapper {
       margin-left: 15%;
